@@ -11,6 +11,7 @@
 
 
     <section>
+        <h1>Einkommenssteuer Rechner</h1>
         <article>
             <h2>Jahr</h2>
             <select name="year" id="year">
@@ -20,25 +21,22 @@
             </select>
         </article>
         <article>
-            <h1>Einkommenssteuer Rechner</h1>
             <form onsubmit="return false">
-                <input type="number" name="income" id="income" placeholder="Ihr Einkommen">
                 <label for="income">zu versteuerndes Einkommen</label>
+                <input type="number" name="income" id="income" placeholder="Ihr Einkommen">
+
             </form>
         </article>
+        <h4>Soll die Rechnung für sie als Einzelperson oder im Split Verfahren erfolgen </h4>
         <article>
-            <h4>Soll die Rechnung für sie als Einzelperson oder im Split Verfahren erfolgen </h4>
             <input type="radio" name="zVE" id="zVESingle" onclick="checkState()">
             <label for="zVESingle">Single</label>
             <input type="radio" name="zVE" id="zVEDouble" onclick="checkState()">
             <label for="zVEDouble">Double</label>
         </article>
-
-
         <article>
             <button name="income" onclick="calcTax()">Steuer berechnen</button>
-            <p id="output">output</p>
-        
+            <p id="output">Steuerbetrag</p>
         </article>
 
     </section>
