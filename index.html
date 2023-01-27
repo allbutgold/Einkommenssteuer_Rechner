@@ -8,10 +8,24 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-    
+    <h1>Einkommenssteuer Rechner</h1>
+    <section>
+        <h2>Soll die Rechnung für sie als Einzelperson oder im Split Verfahren erfolgen </h2>
+        <input type="radio" name="zVE" id="zVESingle">
+        <input type="radio" name="zVE" id="zVEDouble">
+    </section>
+    <section>
+        <form onsubmit="return false">
+            <input type="number" name="income" id="income" placeholder="Ihr Einkommen">
+            <label for="income">zu versteuerndes Einkommen</label>
+            <button name="income" onclick="calcTax()">Steuer berechnen</button>
+        </form>
+        <p id="output">output</p>
+    </section>
 
-    
+
+
 
     <script src="./assets/js/main.js"></script>
 </body>
-</html>
+</html
