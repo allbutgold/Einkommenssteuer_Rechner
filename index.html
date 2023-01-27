@@ -5,27 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
 </head>
 <body>
-    <h1>Einkommenssteuer Rechner</h1>
+
+
     <section>
-        <h2>Soll die Rechnung für sie als Einzelperson oder im Split Verfahren erfolgen </h2>
-        <input type="radio" name="zVE" id="zVESingle">
-        <input type="radio" name="zVE" id="zVEDouble">
-    </section>
-    <section>
-        <form onsubmit="return false">
-            <input type="number" name="income" id="income" placeholder="Ihr Einkommen">
-            <label for="income">zu versteuerndes Einkommen</label>
+        <article>
+            <h2>Jahr</h2>
+            <select name="year" id="year">
+                <option value="0">2020</option>
+                <option value="1">2021</option>
+                <option value="2">2022</option>
+            </select>
+        </article>
+        <article>
+            <h1>Einkommenssteuer Rechner</h1>
+            <form onsubmit="return false">
+                <input type="number" name="income" id="income" placeholder="Ihr Einkommen">
+                <label for="income">zu versteuerndes Einkommen</label>
+            </form>
+        </article>
+        <article>
+            <h4>Soll die Rechnung für sie als Einzelperson oder im Split Verfahren erfolgen </h4>
+            <input type="radio" name="zVE" id="zVESingle" onclick="checkState()">
+            <label for="zVESingle">Single</label>
+            <input type="radio" name="zVE" id="zVEDouble" onclick="checkState()">
+            <label for="zVEDouble">Double</label>
+        </article>
+
+
+        <article>
             <button name="income" onclick="calcTax()">Steuer berechnen</button>
-        </form>
-        <p id="output">output</p>
+            <p id="output">output</p>
+        
+        </article>
+
     </section>
 
 
-
-
+ 
     <script src="./assets/js/main.js"></script>
 </body>
 </html

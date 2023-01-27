@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+  width: 300px;
+  margin: 100px auto;
+}
+section article {
+  height: 150px;
+}
+section article form {
+  margin-top: 20px;
+  display: flex;
+}
+section article #output {
+  color: red;
+}
+
+/*# sourceMappingURL=main.css.map */
